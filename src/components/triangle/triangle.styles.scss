@@ -1,0 +1,14 @@
+
+.triangle {
+    //border:1px solid;
+    padding-top: 2.2rem;
+}
+
+.triangle-container-reverse{
+    //border:none;
+    clip-path: polygon(0% 0%, 50%  100%, 100% 0%, 100% 100%, 0% 100%); 
+}
+.triangle-container{
+    //border:none;
+    clip-path: polygon(0% 0%, 100%  0%, 100% 100%, 50% 0%, 0% 100%); 
+}

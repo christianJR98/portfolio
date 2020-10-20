@@ -1,0 +1,61 @@
+$mainColor: #0648b3;
+$navbar-secondary: #1458c5;
+$otroColor:#1d8cf8;
+
+$newColor:#006494;
+
+.navbar_class {
+    //opacity: 0.8;
+    background-color: rgba(49, 49, 49, 0.932);
+    /*background: linear-gradient(to left,$mainColor,$navbar-secondary);*/
+    height: 5rem;
+    font-size: 1.6rem;
+    width: 100%;
+    color:white;
+
+    /*a {
+        color:white;
+    }
+    a:hover{
+        color:white;
+        text-decoration: none;
+        /*background-color: #1b8f7c;
+    }*/
+        
+    & .options{
+        justify-content: space-evenly;
+        cursor: pointer;
+        & .option {
+            height: 100%;
+            align-self: center;
+            &:hover{
+                background-color:  #1b8f7c;
+            }
+        }
+        & .option:not(:last-child){
+            margin-right: 1.2rem;
+        }
+        & .resume-button{
+            font-size: 1.4rem;
+        }
+    }
+    & .social-media__container{
+        .social-media__icon{
+            margin-right: 1.3rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 575px){ 
+    .navbar {
+        background-color: Blue;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991px) { 
+    .navbar {
+        background-color: red;
+    }
+}
