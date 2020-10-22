@@ -2,7 +2,7 @@
 .contact-me{
     //background-color: #c2bbbb;
     background:linear-gradient(to bottom,#dbd3d3,#c2bbbb);
-    
+
     textarea {
         resize: none !important;
     }
@@ -16,7 +16,9 @@
 
         .img-letter{
             width: 65%;
+            justify-self: center;
         }
     }
+
     
 }

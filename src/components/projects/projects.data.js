@@ -4,6 +4,7 @@ const ProjectsData = [
         name:"Sorting Visualizer",
         image:"/img/developer.jpg",
         description:"Description",
+        url_video:'https://www.youtube.com/embed/o2dXxerxiug',
         technologies:[
             {
                 id: 1,
@@ -20,6 +21,7 @@ const ProjectsData = [
         name:"Sodoku",
         image:"/img/chess.jpg",
         description:"Description",
+        url_video:'https://www.youtube.com/embed/T0ZmErXkbxE',
         technologies:[
             {
                 id: 1,
@@ -32,6 +34,7 @@ const ProjectsData = [
         name:"Affiliate Store",
         image:"/img/guitar.png",
         description:"Description",
+        url_video:'https://www.youtube.com/embed/lhg9bYNLvOg',
         technologies:[
             {
                 id: 1,
@@ -48,6 +51,7 @@ const ProjectsData = [
         name:"Image Analyzer",
         image:"/img/videogames.jpg",
         description:"Description",
+        url_video:'https://www.youtube.com/embed/IGLVMBTIAPE',
         technologies:[
             {
                 id: 1,

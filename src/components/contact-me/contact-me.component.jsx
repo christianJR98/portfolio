@@ -1,15 +1,20 @@
 import React from 'react';
 
+import Title from '../title/title.component';
+
 import './contact-me.styles.scss';
 
 const ContactMe = () =>{
     return (
         <section id="contact-me" className="contact-me pb-5">
              <div className="container">
-                <h2 className="display-3 text-center text-capitalize pt-3 pb-5"><strong>contact me</strong></h2>
+                <Title
+                    text="contact me"
+                    textIsBlack={true}
+                />
 
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-lg-6">
                         <form >
                             <div className="form-group mb-4">
                                 {/*<label htmlFor="name">Name</label>*/}
@@ -36,7 +41,7 @@ const ContactMe = () =>{
 
                         </form>
                     </div>
-                    <div className="col-md-6 letter-container">
+                    <div className="col-lg-6 letter-container d-none d-lg-flex">
                         <img src={process.env.PUBLIC_URL + '/img/letter.svg'} alt="letter" className="img-letter"/>
                     </div>
                 </div>
