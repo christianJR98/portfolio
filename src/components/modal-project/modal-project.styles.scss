@@ -1,5 +1,9 @@
-.project-modal .modal-content{
-    background-color: #e2e2e2;
+.project-modal{
+    overflow:hidden;
+    & .modal-content{
+        background-color: #e2e2e2;
+    }
+
 }
 
 .header-side-block{

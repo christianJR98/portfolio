@@ -2,6 +2,7 @@ import React from 'react';
 
 import Modal from "react-bootstrap/Modal";
 import CustomButton from '../custom-button/custom-button.component';
+import parse from 'html-react-parser';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -34,7 +35,18 @@ const ModalProject = (props) =>{
                 <p>{description}</p>
 
                 <h3 className="mt-4">Technologies</h3>
-                <p>Aqi van Iconos</p>
+                <div className="d-flex mb-3">
+                {
+                    technologies.map((tech) =>{
+                        return ( 
+                            <div key={tech.id} className="m-2">
+                                {parse(tech.html)}
+                            </div>
+                        )
+                    })
+                }
+                </div>
+                
 
                 <CustomButton
                     text="View Code"

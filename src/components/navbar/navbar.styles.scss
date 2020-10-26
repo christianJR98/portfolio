@@ -4,6 +4,10 @@ $otroColor:#1d8cf8;
 
 $newColor:#006494;
 
+a {
+    color:white !important;
+}
+
 .navbar_class {
     background-color: rgba(49, 49, 49, 0.932);
     /*background: linear-gradient(to left,$mainColor,$navbar-secondary);*/
@@ -73,6 +77,12 @@ $newColor:#006494;
             & .options{
                 visibility: hidden;
                 flex-direction: column;
+                width:100%;
+                & .option{
+                   width:100%;
+                   justify-content:center;
+                   padding: 1rem 0; 
+                }
                 & .option:not(:last-child){
                     margin-right: 0;
                     margin-bottom: 0.4rem;
@@ -83,7 +93,7 @@ $newColor:#006494;
             }
             & .social-media__container{
                 visibility: hidden;
-                margin: 0.8rem 0;
+                margin: 1rem 0;
             }
             & .social-media__container.invisible{
                 visibility: visible;
@@ -92,10 +102,6 @@ $newColor:#006494;
     }
 
     .navbar_class.extend{
-        height: 23.6rem;
+        height: 31.6rem;
     }
-}
-//Restart
-@media (min-width: 992px) { 
-
 }

@@ -8,11 +8,15 @@ const ProjectsData = [
         technologies:[
             {
                 id: 1,
-                html:'<i class="fab fa-angular fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/angularjs.svg alt=angular />`
             },
             {
                 id: 2,
-                html:'<i class="fab fa-sass fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/typescript.svg alt=angular />`
+            },
+            {
+                id: 3,
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/css3.svg alt=angular />`
             }
         ]
     },
@@ -25,7 +29,11 @@ const ProjectsData = [
         technologies:[
             {
                 id: 1,
-                html:'<i class="fab fa-react fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/react-native.svg alt=angular />`
+            },
+            {
+                id: 2,
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/javascript.svg alt=angular />`
             }
         ]
     },
@@ -38,11 +46,23 @@ const ProjectsData = [
         technologies:[
             {
                 id: 1,
-                html:'<i class="fab fa-html fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/html-5.svg alt=angular />`
             },
             {
                 id: 2,
-                html:'<i class="fab fa-php fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/css3.svg alt=angular />`
+            },
+            {
+                id: 3,
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/php.svg alt=angular />`
+            },
+            {
+                id: 4,
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/mysql.svg alt=angular />`
+            },
+            {
+                id: 5,
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/bootstrap.svg alt=angular />`
             }
         ]
     },
@@ -55,7 +75,7 @@ const ProjectsData = [
         technologies:[
             {
                 id: 1,
-                html:'<i class="fab fa-react fa-5x"></i>'
+                html: `<img src=${process.env.PUBLIC_URL}/img/tech-icons/c-sharp.svg alt=angular />`
             }
         ]
     },

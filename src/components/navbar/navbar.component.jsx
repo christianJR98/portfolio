@@ -63,8 +63,18 @@ class Navbar extends React.Component{
                         </div>
                     </div>
                     <div className="social-media__container" id="social-media">
-                        <i className="fab fa-github fa-2x social-media__icon"></i>
-                        <i className="fab fa-linkedin-in fa-2x social-media__icon" ></i>
+                        <a href="https://github.com/christianJR98" rel="noopener noreferrer" target="_blank">
+                            <i className="fab fa-github fa-2x social-media__icon"></i>
+                        </a>
+
+                        
+                        {/*
+                            <a href="https://github.com/christianJR98" rel="noopener noreferrer" target="_blank">
+                                <i className="fab fa-linkedin-in fa-2x social-media__icon" ></i>
+                            </a>
+                        */ 
+                        }
+                        
                     </div>
                 </div>
             </nav>

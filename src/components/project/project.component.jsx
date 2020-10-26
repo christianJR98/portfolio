@@ -12,7 +12,7 @@ const Project= (props)=> {
             <div className="card-project">
                 
                 <div className="card-project__header">
-                    <h3 className="text-center">{name}</h3>
+                    <h3 className="text-center header_text">{name}</h3>
                 </div>
                 
       
@@ -32,17 +32,16 @@ const Project= (props)=> {
     
                 <div className="d-flex justify-content-around py-3 buttons-container">
                     <CustomButton 
-                        text="View Code"    
+                        text="View Code"
+                        otherClasses="project_button"      
                     />
-                    <button className="btn btn-info btn-lg px-4" id={id} onClick={props.getIdProject}>Details</button>
+                    <button className="btn btn-info btn-lg px-4 project_button" id={id} onClick={props.getIdProject}>Details</button>
     
                     <CustomButton 
-                        text="View Project"  
+                        text="View Project"
+                        otherClasses="project_button"  
                     />
                 </div>
-    
-                {/*<p>{description}</p>
-                */}
     
             </div>
         )
