@@ -1,15 +1,13 @@
-
-
 .about-me {
-    /*background-color: #c2bbbb;*/
+  /*background-color: #c2bbbb;*/
 
-    background:linear-gradient(#dbd3d3,#c2bbbb);
+  background: linear-gradient(#dbd3d3, #c2bbbb);
 
-    & .paragraph {
-        font-size: 1.8rem;
-    }
-    .about-me--img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  & .paragraph {
+    font-size: 1.8rem;
+  }
+  .about-me--img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
