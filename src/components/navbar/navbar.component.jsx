@@ -25,7 +25,7 @@ class Navbar extends React.Component {
       this.setState({ menuMobileDisplay: true }, () => {
         document.getElementById("options").classList.add("visible");
         document.getElementById("social-media").classList.add("visible");
-        //to se the number you have to uncommnet the code
+        //to se the number you have to uncomment the code
         //Se cambia a auto y se revisa la consola
         document.getElementById("navbar").classList.add("extend");
       });
@@ -81,9 +81,14 @@ class Navbar extends React.Component {
               Contact me
             </div>
             <div>
-              <button className="btn btn-info btn-lg rounded-pill px-5 resume-button">
+              <a
+                className="btn btn-info btn-lg rounded-pill px-5 resume-button"
+                href={`${process.env.PUBLIC_URL}/docs/resume.pdf`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Resume
-              </button>
+              </a>
             </div>
           </div>
           <div className="social-media__container" id="social-media">
@@ -94,9 +99,8 @@ class Navbar extends React.Component {
             >
               <i className="fab fa-github fa-2x social-media__icon"></i>
             </a>
-
             <a
-              href="https://github.com/christianJR98"
+              href="https://www.linkedin.com/in/christian-jacobo-a06b61148"
               rel="noopener noreferrer"
               target="_blank"
             >

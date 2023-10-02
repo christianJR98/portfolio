@@ -1,64 +1,61 @@
 .card-project {
-    border-style: solid;
-    border-radius: 0.75rem;
-    border: none;
-    box-shadow: 1.2rem 1.5rem 3.3rem -0.4rem rgba(126, 126, 126, 0.43);
+  border-style: solid;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 1.2rem 1.5rem 3.3rem -0.4rem rgba(126, 126, 126, 0.43);
 
-    background-color: #e2e2e2;
+  background-color: #e2e2e2;
 
-    & .card-project__header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top-left-radius: 0.50rem;
-        border-top-right-radius: 0.50rem;
-    
-        position: relative;
-        height: 4rem;
+  & .card-project__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 
-        color: rgb(0, 0, 0);
+    position: relative;
+    height: 4rem;
 
-        & .header_text{
-            font-size:2rem;
-        }
+    color: rgb(0, 0, 0);
+
+    & .header_text {
+      font-size: 2rem;
     }
-    & .card-project--img{
-        max-width: 100%;
-        max-height: 100%;
-    }
+  }
+  & .card-project--img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+  }
 
-    .technologies-container{
-        //background-color: #e2e2e2;
-         .icon-style{
-            width: 4.8rem;
-            height: 4.8rem;
-        }
+  .technologies-container {
+    //background-color: #e2e2e2;
+    .icon-style {
+      width: 4.8rem;
+      height: 4.8rem;
     }
-    & .buttons-container{
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        & .project_button{
-            font-size:1.5rem;
-        }
+  }
+  & .buttons-container {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    & .project_button {
+      font-size: 1.5rem;
     }
+  }
 
-    &:hover{
-        transform: scale(1.02);
-        transition: transform 0.3s ease;
-    }
+  &:hover {
+    transform: scale(1.02);
     transition: transform 0.3s ease;
+  }
+  transition: transform 0.3s ease;
 }
 
-
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    .card-project {
-        & .buttons-container{
-        
-            & .project_button{
-                font-size:1.4rem;
-            }
-        }
-
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card-project {
+    & .buttons-container {
+      & .project_button {
+        font-size: 1.4rem;
+      }
     }
-     
- }
+  }
+}
