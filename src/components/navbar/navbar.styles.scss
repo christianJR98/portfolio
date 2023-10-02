@@ -51,7 +51,7 @@ a {
 @media (max-width: 991px) {
   .navbar_class {
     //display: sticky;
-    transition: height 0.8s ease;
+    transition: height 0.6s ease;
 
     & .navbar_container {
       overflow: hidden;
@@ -68,6 +68,11 @@ a {
           margin-bottom: auto;
         }
       }
+
+      & .icon-bars-container:hover {
+        cursor: pointer;
+      }
+
       & .options {
         visibility: hidden;
         flex-direction: column;
