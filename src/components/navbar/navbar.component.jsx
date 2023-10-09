@@ -45,7 +45,7 @@ class Navbar extends React.Component {
   };
   render() {
     return (
-      <nav className="navbar_class sticky-top d-flex" id="navbar">
+      <nav className="navbar_class fixed-top d-flex" id="navbar">
         <div className="container d-flex justify-content-between h-100 align-items-center navbar_container">
           <div className="icon-bars-container" onClick={this.toggleMenuMobile}>
             <i className="fas fa-bars fa-2x icon-responsive"></i>
