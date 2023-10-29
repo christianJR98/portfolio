@@ -43,7 +43,7 @@ const ProjectsData = [
   {
     id: 2,
     name: "Affiliate Store",
-    image: "/img//projects/affiliate-store.png",
+    image: "/img/projects/affiliate-store.png",
     code: "https://github.com/christianJR98/regalos-de-musica",
     app: " http://musicgifts.atwebpages.com",
     url_video: null,
