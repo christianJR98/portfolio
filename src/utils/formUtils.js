@@ -72,14 +72,3 @@ const getFieldName = (input) => {
   //and get all the string from the position 1
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 };
-
-/*
-form.addEventListener('submit',function(e){
-    e.preventDefault();
-
-    checkRequired([username,email,password,password2]);
-    checkLength(username,3,15);
-    checkLength(password,6,25);
-    checkEmail(email);
-    checkPasswordsMatch(password,password2);
-})*/
