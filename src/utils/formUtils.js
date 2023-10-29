@@ -32,19 +32,15 @@ export const emailIsValid = (input) => {
   }
 };
 
-export const checkRequired = (inputArr) => {
-  let returnValue = true;
-  inputArr.forEach(function (input) {
-    //each input is the tag
-    //trim function eliminate the blank spaces
-    if (input.value.trim() === "") {
-      showError(input, `${getFieldName(input)} is required`);
-      returnValue = false;
-    } else {
-      showSuccess(input);
-    }
-  });
-  return returnValue;
+export const checkRequired = (input) => {
+  //trim function eliminate the blank spaces
+  if (input.value.trim() === "") {
+    showError(input, `${getFieldName(input)} is required`);
+    return false;
+  } else {
+    showSuccess(input);
+  }
+  return true;
 };
 
 // Check input length

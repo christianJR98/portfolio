@@ -36,24 +36,14 @@ const ContactMe = () => {
 
     let formHasErrors = false;
 
-    if (
-      !checkRequired([
-        nameElement,
-        emailElement,
-        subjectElement,
-        messageElement,
-      ])
-    ) {
+    if (!checkRequired(nameElement) || !checkLength(nameElement, 3, 50)) {
       formHasErrors = true;
     }
 
-    if (!checkLength(nameElement, 3, 50)) {
+    if (!checkRequired(subjectElement) || !checkLength(subjectElement, 2, 50)) {
       formHasErrors = true;
     }
-    if (!checkLength(subjectElement, 2, 50)) {
-      formHasErrors = true;
-    }
-    if (!checkLength(message, 2, 300)) {
+    if (!checkRequired(messageElement) || !checkLength(messageElement, 2, 300)) {
       formHasErrors = true;
     }
 
@@ -75,7 +65,7 @@ const ContactMe = () => {
     setButtonDisabled(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/email`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/email`, {
         method: "POST",
         headers: {
           "x-api-key": `${process.env.REACT_APP_API_KEY}`,
@@ -85,8 +75,6 @@ const ContactMe = () => {
       });
 
       setErrorModal(false);
-      const apiData = await response.json();
-      console.log(apiData);
 
       setTitleModal("Success");
       setTextModal("Email sent");
@@ -110,7 +98,7 @@ const ContactMe = () => {
           <div className="col-lg-6">
             <form id="contact-me-form">
               <div className="form-group mb-4">
-                {/*<label htmlFor="name">Name</label>*/}
+                <label htmlFor="name">Name</label>
                 <input
                   className="form-control form-control-lg fields"
                   type="text"
@@ -122,7 +110,7 @@ const ContactMe = () => {
                 <small>Error message</small>
               </div>
               <div className="form-group mb-4">
-                {/*<label htmlFor="email">Email</label>*/}
+                <label htmlFor="email">Email</label>
                 <input
                   className="form-control form-control-lg fields"
                   type="email"
@@ -135,7 +123,7 @@ const ContactMe = () => {
               </div>
 
               <div className="form-group mb-4">
-                {/*<label htmlFor="subject">Subject</label>*/}
+                <label htmlFor="subject">Subject</label>
                 <input
                   className="form-control form-control-lg fields"
                   type="text"
@@ -148,7 +136,7 @@ const ContactMe = () => {
               </div>
 
               <div className="form-group mb-4">
-                {/*<label htmlFor="">Message</label>*/}
+                <label htmlFor="message">Message</label>
                 <textarea
                   className="form-control form-control-lg fields"
                   id="message"
