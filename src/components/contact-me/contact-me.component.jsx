@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Modal, Button, Alert } from "react-bootstrap";
 
-import { checkRequired, emailIsValid } from "../../utils/formUtils";
+import {
+  checkLength,
+  checkRequired,
+  emailIsValid,
+} from "../../utils/formUtils";
 import Title from "../title/title.component";
 
 import "./contact-me.styles.scss";
@@ -25,18 +29,40 @@ const ContactMe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const nameTag = document.getElementById("name");
-    const emailTag = document.getElementById("email");
-    const subjectTag = document.getElementById("subject");
-    const messageTag = document.getElementById("message");
+    const nameElement = document.getElementById("name");
+    const emailElement = document.getElementById("email");
+    const subjectElement = document.getElementById("subject");
+    const messageElement = document.getElementById("message");
 
-    // TODO: add limitations to the fields
+    let formHasErrors = false;
 
-    if (!checkRequired([nameTag, emailTag, subjectTag, messageTag])) {
-      return
+    if (
+      !checkRequired([
+        nameElement,
+        emailElement,
+        subjectElement,
+        messageElement,
+      ])
+    ) {
+      formHasErrors = true;
     }
-    if (!emailIsValid(emailTag)) {
-      return
+
+    if (!checkLength(nameElement, 3, 50)) {
+      formHasErrors = true;
+    }
+    if (!checkLength(subjectElement, 2, 50)) {
+      formHasErrors = true;
+    }
+    if (!checkLength(message, 2, 300)) {
+      formHasErrors = true;
+    }
+
+    if (!emailIsValid(emailElement)) {
+      formHasErrors = true;
+    }
+
+    if(formHasErrors){
+      return;
     }
 
     const emailInfo = {
@@ -52,10 +78,10 @@ const ContactMe = () => {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/email`, {
         method: "POST",
         headers: {
-          'x-api-key': `${process.env.REACT_APP_API_KEY}`,
-          'Content-Type': 'application/json',
+          "x-api-key": `${process.env.REACT_APP_API_KEY}`,
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(emailInfo)
+        body: JSON.stringify(emailInfo),
       });
 
       setErrorModal(false);

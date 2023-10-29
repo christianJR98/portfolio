@@ -61,7 +61,10 @@ export const checkLength = (input, min, max) => {
     );
   } else {
     showSuccess(input);
+    return true;
   }
+
+  return false;
 };
 
 const getFieldName = (input) => {
