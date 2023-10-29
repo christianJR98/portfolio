@@ -20,16 +20,16 @@ const AboutMe = () => {
           </div>
           <div className=" col-md-12 col-lg-6">
             <p className="text-justify paragraph">
-              I am a software developer that loves to create web apps and
-              automate tasks. I started on the programming world because i
-              really like the idea that you can make everything that you want
-              just writing code, you can solve difficult problems, automate
-              simple tasks or make tools to help the people. This idea of create
-              whatever that you can imagine just with your computer is amazing.
+              I am a software developer who loves to create web apps and
+              automate tasks. I started in the programming world because I
+              really like the idea that you can make everything you want just by
+              writing code. You can solve difficult problems, automate simple
+              tasks, or create tools to help people. This idea of creating
+              whatever you can imagine just with your computer is amazing.
             </p>
             <p className="text-justify paragraph">
-              Besides programming i like to play guitar, listen to music, play
-              chess and videogames with friends.
+              Besides programming, I like to play the guitar, listen to music,
+              play chess, and video games with friends.
             </p>
           </div>
         </div>
