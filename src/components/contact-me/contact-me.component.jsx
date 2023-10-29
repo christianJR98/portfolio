@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import * as emailjs from 'emailjs-com'
 import { Modal, Button, Alert } from "react-bootstrap";
 
 import { checkRequired, emailIsValid } from "../../utils/formUtils";
@@ -31,16 +30,13 @@ const ContactMe = () => {
     const subjectTag = document.getElementById("subject");
     const messageTag = document.getElementById("message");
 
-    let existError = false;
+    // TODO: add limitations to the fields
 
     if (!checkRequired([nameTag, emailTag, subjectTag, messageTag])) {
-      existError = true;
+      return
     }
     if (!emailIsValid(emailTag)) {
-      existError = true;
-    }
-    if (existError) {
-      return;
+      return
     }
 
     const emailInfo = {
@@ -52,23 +48,32 @@ const ContactMe = () => {
 
     setButtonDisabled(true);
 
-    console.log('Send email');
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/email`, {
+        method: "POST",
+        headers: {
+          'x-api-key': `${process.env.REACT_APP_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailInfo)
+      });
 
-    // emailjs.send(serviceId,templateId, emailInfo, userId)
-    //     .then((response) => {
-    //         setErrorModal(false)
-    //         setTitleModal('Success')
-    //         setTextModal('Email sent')
-    //         document.getElementById('contact-me-form').reset()
-    //         showModal()
-    //         setButtonDisabled(false)
-    //     }, (err) => {
-    //         setErrorModal(true)
-    //         setTitleModal('Error')
-    //         setTextModal('Email was not sent')
-    //         showModal()
-    //         setButtonDisabled(false)
-    //     });
+      setErrorModal(false);
+      const apiData = await response.json();
+      console.log(apiData);
+
+      setTitleModal("Success");
+      setTextModal("Email sent");
+      document.getElementById("contact-me-form").reset();
+      showModal();
+      setButtonDisabled(false);
+    } catch (err) {
+      setErrorModal(true);
+      setTitleModal("Error");
+      setTextModal("Email was not sent");
+      showModal();
+      setButtonDisabled(false);
+    }
   };
   return (
     <section id="contact-me" className="contact-me pb-5">
