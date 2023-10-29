@@ -1,107 +1,106 @@
 $mainColor: #0648b3;
 $navbar-secondary: #1458c5;
-$otroColor:#1d8cf8;
+$otroColor: #1d8cf8;
 
-$newColor:#006494;
+$newColor: #006494;
 
 a {
-    color:white !important;
+  color: white !important;
 }
 
 .navbar_class {
-    background-color: rgba(49, 49, 49, 0.932);
-    /*background: linear-gradient(to left,$mainColor,$navbar-secondary);*/
-    height: 5rem;
-    font-size: 1.6rem;
-    width: 100%;
-    color:white;
+  background-color: rgba(49, 49, 49, 0.932);
+  /*background: linear-gradient(to left,$mainColor,$navbar-secondary);*/
+  height: 5rem;
+  font-size: 1.6rem;
+  width: 100%;
+  color: white;
 
-    & .navbar_container{
-
-        & .icon-bars-container{
-            display: none;
-        }
-            
-        & .options{
-            
-            justify-content: space-evenly;
-            cursor: pointer;
-            & .option {
-                height: 100%;
-                align-self: center;
-                &:hover{
-                    background-color:  #1b8f7c;
-                }
-            }
-            & .option:not(:last-child){
-                margin-right: 1.2rem;
-            }
-            & .resume-button{
-                font-size: 1.4rem;
-            }
-        }
-        & .social-media__container{
-            
-            .social-media__icon{
-                margin-right: 1.3rem;
-                cursor: pointer;
-            }
-        }
+  & .navbar_container {
+    & .icon-bars-container {
+      display: none;
     }
+
+    & .options {
+      justify-content: space-evenly;
+      cursor: pointer;
+      & .option {
+        height: 100%;
+        align-self: center;
+        &:hover {
+          background-color: #1b8f7c;
+        }
+      }
+      & .option:not(:last-child) {
+        margin-right: 1.2rem;
+      }
+      & .resume-button {
+        font-size: 1.4rem;
+      }
+    }
+    & .social-media__container {
+      .social-media__icon {
+        margin-right: 1.3rem;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-
 // Medium devices (tablets, 768px and up)
-@media (max-width: 991px) { 
-    .navbar_class {
-        
-        //display: sticky;
-        transition: height 0.8s ease;
+@media (max-width: 991px) {
+  .navbar_class {
+    //display: sticky;
+    transition: height 0.6s ease;
 
-        & .navbar_container{
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
+    & .navbar_container {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
 
+      & .icon-bars-container {
+        display: block;
+        height: 100%;
+        margin-top: 8px;
 
-            & .icon-bars-container{
-                display: block;
-                height: 100%;
-                margin-top: 8px;
-
-                & .icon-responsive{
-                    margin-top: auto;
-                    margin-bottom: auto;
-                }
-            }
-            & .options{
-                visibility: hidden;
-                flex-direction: column;
-                width:100%;
-                & .option{
-                   width:100%;
-                   justify-content:center;
-                   padding: 1rem 0; 
-                }
-                & .option:not(:last-child){
-                    margin-right: 0;
-                    margin-bottom: 0.4rem;
-                }
-            }
-            & .options.visible{
-                visibility: visible;
-            }
-            & .social-media__container{
-                visibility: hidden;
-                margin: 1rem 0;
-            }
-            & .social-media__container.invisible{
-                visibility: visible;
-            }
+        & .icon-responsive {
+          margin-top: auto;
+          margin-bottom: auto;
         }
-    }
+      }
 
-    .navbar_class.extend{
-        height: 31.6rem;
+      & .icon-bars-container:hover {
+        cursor: pointer;
+      }
+
+      & .options {
+        visibility: hidden;
+        flex-direction: column;
+        width: 100%;
+        & .option {
+          width: 100%;
+          justify-content: center;
+          padding: 1rem 0;
+        }
+        & .option:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 0.4rem;
+        }
+      }
+      & .options.visible {
+        visibility: visible;
+      }
+      & .social-media__container {
+        visibility: hidden;
+        margin: 1rem 0;
+      }
+      & .social-media__container.invisible {
+        visibility: visible;
+      }
     }
+  }
+
+  .navbar_class.extend {
+    height: 31.6rem;
+  }
 }

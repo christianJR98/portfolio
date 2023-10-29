@@ -1,16 +1,23 @@
-.project-modal{
-    overflow:hidden;
-    & .modal-content{
-        background-color: #e2e2e2;
-    }
-
+.project-modal {
+  overflow: hidden;
+  & .modal-content {
+    background-color: #e2e2e2;
+  }
 }
 
-.header-side-block{
-    width: 3rem;
-    padding-right: 4rem;
+.header-side-block {
+  width: 3rem;
+  padding-right: 4rem;
 }
 
-.close-modal-button{
-    cursor: pointer;
+.close-modal-button {
+  cursor: pointer;
+}
+
+.description-modal {
+  font-size: 1.4rem;
+}
+
+.description-modal-emphasis {
+  font-weight: 500;
 }

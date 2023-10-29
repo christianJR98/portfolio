@@ -1,133 +1,128 @@
-$interesante: #268AA0;
-$interesant2:#3C4D69;
+$interesante: #268aa0;
+$interesant2: #3c4d69;
 
-$color__2:#a52020;
-$color__3:#1b8f7c;
-$color__4:#004ab9;
-$color__6:#364f74;
-$color__5:#9132b6;
+$color__2: #a52020;
+$color__3: #1b8f7c;
+$color__4: #004ab9;
+$color__6: #364f74;
+$color__5: #9132b6;
 
-.hero{
-    //5 rem is the height of the navbar
-    height: calc(100vh - 5rem);
-    width: 100%;
-    font-size: 5rem;
-    text-align: center;
-    /*background-color: $interesant2;*/
-    //background: linear-gradient(to bottom right, $interesant2, $interesante);
-    background-color: $color__2;
-    background: linear-gradient(to right, $color__4,$color__3);
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    overflow:hidden;
-    
-    ul {
-        li {
-            position: absolute;
-            display: block;
-            list-style: none;
-            background: rgba(255,255,255,0.2);
-            &.animateToLeft{
-                animation: animateToLeft 20s linear infinite;
-            }
-            &.animateToRight{
-                animation: animateToRight 20s linear infinite;
-            }
-            &:nth-child(1){
-                top:12%;
-                right:-80px;
-                width:80px;
-                height: 80px;
-                animation-duration:12s;
-            }
-            &:nth-child(2){
-                top:33%;
-                right:-30px;
-                width:30px;
-                height: 30px;
-                animation-delay: 2.5s;
-                animation-duration:10s;
-            }
-            &:nth-child(3){
-                top:58%;
-                right:-150px;
-                width:150px;
-                height: 150px;
-                animation-delay: 3s;
-                animation-duration: 15s;
-                
-            }
-            &:nth-child(4){
-                top:71%;
-                right:-100px;
-                width:100px;
-                height: 100px;
-                animation-delay: 5.5s;
-                animation-duration:15s;
-            }
-            
+.hero {
+  height: 100vh;
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+  /*background-color: $interesant2;*/
+  //background: linear-gradient(to bottom right, $interesant2, $interesante);
+  background-color: $color__2;
+  background: linear-gradient(to right, $color__4, $color__3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 
-            &:nth-child(5){
-                top:13%;
-                left:-110px;
-                width:110px;
-                height: 110px;
-                animation-delay: 3.5s;
-                
-            }
-            &:nth-child(6){
-                top:37%;
-                left: -66px;
-                width:66px;
-                height: 66px;
-                animation-delay: 2.8s;
-            }
-            &:nth-child(7){
-                top:60%;
-                left:-40px;
-                width:40px;
-                height: 40px;
-                animation-delay: 0s;
-            }
-            &:nth-child(8){
-                top:82%;
-                left:-110px;
-                width:110px;
-                height: 110px;
-                animation-delay: 5s;
-            }
-        }
+  ul {
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      background: rgba(255, 255, 255, 0.2);
+      &.animateToLeft {
+        animation: animateToLeft 20s linear infinite;
+      }
+      &.animateToRight {
+        animation: animateToRight 20s linear infinite;
+      }
+      &:nth-child(1) {
+        top: 12%;
+        right: -80px;
+        width: 80px;
+        height: 80px;
+        animation-duration: 12s;
+      }
+      &:nth-child(2) {
+        top: 33%;
+        right: -30px;
+        width: 30px;
+        height: 30px;
+        animation-delay: 2.5s;
+        animation-duration: 10s;
+      }
+      &:nth-child(3) {
+        top: 58%;
+        right: -150px;
+        width: 150px;
+        height: 150px;
+        animation-delay: 3s;
+        animation-duration: 15s;
+      }
+      &:nth-child(4) {
+        top: 71%;
+        right: -100px;
+        width: 100px;
+        height: 100px;
+        animation-delay: 5.5s;
+        animation-duration: 15s;
+      }
+
+      &:nth-child(5) {
+        top: 13%;
+        left: -110px;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3.5s;
+      }
+      &:nth-child(6) {
+        top: 37%;
+        left: -66px;
+        width: 66px;
+        height: 66px;
+        animation-delay: 2.8s;
+      }
+      &:nth-child(7) {
+        top: 60%;
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        animation-delay: 0s;
+      }
+      &:nth-child(8) {
+        top: 82%;
+        left: -110px;
+        width: 110px;
+        height: 110px;
+        animation-delay: 5s;
+      }
     }
+  }
 }
 
 @media (max-width: 575.98px) {
-    .hero{
-        font-size:3.4rem;
-    }
+  .hero {
+    font-size: 3.4rem;
+  }
 }
 
-
-@keyframes animateToLeft{
-    0%{
-        transform: translateX(0) rotate(0deg);
-        opacity: 0.5;
-    }
-    100%{
-        transform: translateX(-800px) rotate(360deg);
-        opacity: 0;
-    }
+@keyframes animateToLeft {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-800px) rotate(360deg);
+    opacity: 0;
+  }
 }
-@keyframes animateToRight{
-    0%{
-        transform: translateX(0) rotate(0deg);
-        opacity: 0.5;
-    }
-    100%{
-        transform: translateX(800px) rotate(360deg);
-        opacity: 0;
-    }
+@keyframes animateToRight {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(800px) rotate(360deg);
+    opacity: 0;
+  }
 }

@@ -8,6 +8,20 @@
   label {
     font-size: 1.5rem;
   }
+
+  .form-group small {
+    color: rgb(255, 0, 0);
+    font-size: 1.3rem;
+    /*Visible vs Hidden*/
+    /*Colapsa todo alrededor y hidden solo lo oculta*/
+    //visibility: hidden;
+    display: none;
+  }
+
+  .form-group.error small {
+    display: block;
+  }
+
   .fields {
     font-size: 1.5rem;
   }
@@ -24,4 +38,16 @@
       justify-self: center;
     }
   }
+}
+
+/*Modal*/
+.modal-header-styles {
+  font-size: 2.4rem;
+}
+
+.modal-body-styles {
+  font-size: 1.5rem;
+}
+.modal-button-styles {
+  font-size: 1.5rem;
 }
